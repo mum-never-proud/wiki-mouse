@@ -1,2 +1,2 @@
-# wiki-mouse [WIP]
-log all mouse events of a session
+# wiki-events [WIP]
+log events of a session
