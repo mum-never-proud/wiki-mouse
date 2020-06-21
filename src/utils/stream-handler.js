@@ -8,6 +8,7 @@ export default function(ev) {
     this.config.stream({
       type: 'event',
       eventType: ev.type,
+      eventTarget: ev.target,
       x: ev.clientX,
       y: ev.clientY
     });

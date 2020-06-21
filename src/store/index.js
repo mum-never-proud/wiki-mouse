@@ -1,5 +1,5 @@
 export default {
-  events: [],
+  frames: [],
   since: null,
   document: null,
 };

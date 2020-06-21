@@ -3,6 +3,7 @@ import defaultConfig from './constants/config';
 import eventHandler from './utils/event-handler';
 import store from './store';
 import streamHandler from './utils/stream-handler';
+import $wp from 'wiki-events-player';
 
 class WikiEvents {
   constructor(config = {}) {
@@ -11,11 +12,10 @@ class WikiEvents {
     this[_streamHandler] = streamHandler.bind(this);
     this[_paused] = false;
     this[_running] = false;
-
     store.document = document.documentElement.cloneNode(true);
     store.dimensions = {
-      width: window.innerWidth,
-      height: window.innerHeight
+      width: window.outerWidth,
+      height: window.outerHeight
     };
     store.since = Date.now();
 
@@ -66,12 +66,16 @@ class WikiEvents {
     return this;
   }
 
-  peekEvents() {
-    return store.events;
+  peekFrames() {
+    return store.frames;
   }
 
   dump() {
     return store;
+  }
+
+  static play(record) {
+    new $wp(record, { dimensions: record.dimensions });
   }
 }
 
