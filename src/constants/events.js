@@ -1,7 +1,8 @@
 export default [
+  'click',
   'dblclick',
-  'mousemove',
   'mousedown',
+  'mousemove',
   'mouseup',
-  'scroll'
+  'scroll',
 ];
