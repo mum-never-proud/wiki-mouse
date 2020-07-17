@@ -8,10 +8,10 @@ export default function eventHandler(ev) {
       type: 'event',
       eventType: ev.type,
       eventTarget: createSnapshot(ev.target, false),
-      x: ev.clientX || 0,
-      y: ev.clientY || 0,
-      sx: window.scrollX || 0,
-      sy: window.scrollY || 0,
+      x: ev.screenX || 0,
+      y: ev.screenY || 0,
+      sx: window.screenX || 0,
+      sy: window.screenY || 0,
       timestamp: Date.now(),
     };
 
