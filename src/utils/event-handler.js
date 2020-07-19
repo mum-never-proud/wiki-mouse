@@ -18,7 +18,7 @@ export default function eventHandler(ev) {
     if (this.isStream) {
       this.config.stream(payload);
     } else {
-      store.frames.push(payload);
+      store.events.push(payload);
     }
   }
 }

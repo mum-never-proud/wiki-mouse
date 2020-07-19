@@ -1,5 +1,6 @@
 export default {
-  frames: [],
+  events: [],
+  mutations: [],
   since: null,
   snapshot: {},
 };

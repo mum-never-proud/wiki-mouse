@@ -36,7 +36,7 @@ export default function mutationHandler(mutations) {
     if (this.isStream) {
       this.config.stream(payload);
     } else {
-      store.frames.push(payload);
+      store.mutations.push(payload);
     }
   });
 }

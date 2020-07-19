@@ -39,8 +39,8 @@ class WikiEvents {
     if (!this[_running]) {
       if (this.isStream) {
         this.config.stream({
-          type: 'config',
           ...store,
+          type: 'config',
           timestamp: Date.now(),
         });
       }
@@ -75,12 +75,20 @@ class WikiEvents {
     return this;
   }
 
-  peekFrames() {
-    return store.frames;
+  peekEvents() {
+    return store.events;
+  }
+
+  peekMutations() {
+    return store.mutations;
   }
 
   dump() {
     return store;
+  }
+
+  toString() {
+    return JSON.stringify(store);
   }
 }
 
